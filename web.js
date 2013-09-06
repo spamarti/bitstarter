@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.logger());
-
+fs = require('fs');
 app.get('/', function(request, response) {
 fs.readFile('index.html', function (err, data) {
   if (err) throw err;
